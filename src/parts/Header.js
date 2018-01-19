@@ -34,7 +34,8 @@ const NavMenu = styled.div`
     cursor: pointer;
     height: 100%;
 
-    &:hover {
+    &:hover,
+    & a.active {
       color: ${p => p.theme.color.main};
     }
   }
@@ -46,7 +47,9 @@ export default () => (
     <NavMenu>
       <ul className="navmenu">
         <li className="navitem">
-          <NavLink to="/">Blog</NavLink>
+          <NavLink exact to="/">
+            Blog
+          </NavLink>
         </li>
         <li className="navitem">
           <NavLink to="/about">About</NavLink>
